@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%; /* Ensures navbar spans the full width */
+    background-color: #111; /* Dark background for contrast */
+    padding: 15px 0; /* Spacing for content inside */
+    position: sticky; /* Sticks to the top of the page on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Aligns items in a horizontal row */
+    justify-content: center; /* Centers the navigation items */
+    gap: 20px; /* Space between menu items */
+}
+
+nav ul li a {
+    color: white; /* Keeps links readable on dark background */
+    text-decoration: none; /* Removes default underline from links */
+    font-size: 1.2rem; /* Increases font size for visibility */
+    transition: color 0.3s; /* Smooth transition effect on hover */
+}
+
+nav ul li a:hover {
+    color: #00ffea; /* Highlight color when hovering over links */
+}
+
+/* Hero Section */
+.hero {
+    width: 100%; /* Ensures it spans full width */
+    height: 400px; /* Fixed height for hero section */
+    background: url('') center/cover no-repeat; /* Adds hero image */
+    display: flex; /* Centers content vertically and horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adds spacing inside the hero */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Large heading for emphasis */
+    text-shadow: 2px 2px 10px #00ffea; /* Glowing text effect */
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Secondary text smaller than the heading */
+    margin-top: 10px;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limits width for better readability */
+    margin: 0 auto; /* Centers the grid */
+}
+
+.card {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #f9d423); /* Subtle gradient for cards */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for modern look */
+    box-shadow: 0 0 15px rgba(0, 255, 234, 0.5); /* Glow effect */
+}
+
+.company-bg {
+    background: url('static/bg.png') center/cover no-repeat; /* Adds background image */
+    padding: 20px;
+    border-radius: 10px;
+    color: deeppink;
+    width: 100%;
+}
+
+.user-form form {
+    display: flex;
+    flex-direction: column; /* Stacks inputs vertically */
+    gap: 10px; /* Space between form elements */
+}
+
+.user-form input, .user-form textarea {
+    padding: 10px; /* Space inside input fields */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded input fields */
+    font-size: 1rem; /* Standard input text size */
+    color: white; /* Text color for readability */
+    background: rgba(255, 255, 255, 0.1); /* Transparent field background */
+    backdrop-filter: blur(5px); /* Adds a subtle blur for effect */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex; /* Aligns social icons in a horizontal row */
+    justify-content: center; /* Centers the icons */
+    gap: 15px; /* Space between the icons */
+    padding: 20px 0;
+    flex-wrap: wrap; /* Wraps icons on smaller screens */
+}
+
+.social-btn {
+    border-radius: 50%; /* Makes icons circular */
+    width: 60px; /* Sets icon size */
+    height: 60px;
+    display: flex;
+    align-items: center; /* Centers icon inside the circle */
+    justify-content: center;
+    font-size: 1.5rem; /* Icon size */
+    margin: 10px; /* Adds spacing between icons */
+    color: white; /* Default icon color */
+    background: #222; /* Dark circle background */
+    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.social-btn:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; /* Enhanced glow on hover */
+    background-color: white; /* Changes background to match the brand */
+    color: #000; /* Sets icon to black for contrast */
+}
+
+.social-btn:hover i {
+    color: inherit; /* Inherits color change for the icon */
+}
+
+/* Footer */
+footer {
+    background-color: #111; /* Dark background */
+    padding: 20px 0; /* Vertical padding */
+    width: 100%;
+    text-align: center;
+}
+
+footer .partners img {
+    width: 80px; /* Standardizes partner logo size */
+    margin: 10px; /* Space between logos */
+}
+
+footer .footer-content {
+    max-width: 1200px; /* Restricts content width */
+    margin: 0 auto; /* Centers content */
+    padding: 0 10px; /* Adds side padding */
+}
+/* Neon Send Button */
+.send-btn {
+    padding: 5px 10px; /* Button size */
+    font-size: 1.2rem; /* Larger text size */
+    color: white; /* Text color */
+    background: linear-gradient(135deg, #ff00ff, #00ffff); /* Neon gradient background */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff; /* Neon glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.send-btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff; /* Enhanced glow */
+}
+
+/* Social Icons with Brand Backgrounds */
+.social-btn {
+    border-radius: 50%; /* Makes icons circular */
+    width: 60px; /* Icon size */
+    height: 60px;
+    display: flex;
+    align-items: center; /* Centers icon within circle */
+    justify-content: center;
+    font-size: 1.5rem; /* Icon size */
+    color: white; /* Default icon color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.social-btn:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Glow effect on hover */
+}
+
+.social-btn.fa-facebook:hover {
+    background-color: #3b5998; /* Facebook blue */
+}
+
+.social-btn.twitter:hover {
+    background-color: #1da1f2; /* Twitter blue */
+}
+
+.social-btn.instagram:hover {
+    background-color: #e1306c; /* Instagram pink */
+}
+
+.social-btn.linkedin:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+.social-icons a {
+    text-decoration: none; /* Removes underline from all anchor elements within .social-icons */
+}
+
